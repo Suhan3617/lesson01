@@ -7,5 +7,6 @@ export class UsersController {
     GET /users/:id
     POST /users
     PATCH /users/:id
+    DELETE /users/:id
     */
 }
