@@ -13,7 +13,7 @@ export class UsersService {
       id: 2,
       name: 'Ervin Howell',
       email: 'ervin.howell@example.com',
-      role: 'INTERN',
+      role: 'EMPLOYEE',
     },
     {
       id: 3,
@@ -25,13 +25,13 @@ export class UsersService {
       id: 4,
       name: 'Patricia Lebsack',
       email: 'patricia.lebsack@example.com',
-      role: 'INTERN',
+      role: 'EMPLOYEE',
     },
     {
       id: 5,
       name: 'Chelsey Dietrich',
       email: 'chelsey.dietrich@example.com',
-      role: 'INTERN',
+      role: 'EMPLOYEE',
     },
     {
       id: 6,
