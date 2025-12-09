@@ -5,31 +5,31 @@ import { DatabaseService } from 'src/database/database.service';
 @Injectable()
 export class EmployeeService {
   constructor(private readonly databaseservice : DatabaseService) {}
-  async create(createEmployeeDto: Prisma.UserCreateInput) {
-    return this.databaseservice.user.create({
+  async create(createEmployeeDto: Prisma.EmployeeCreateInput) {
+    return this.databaseservice.employee.create({
       data:createEmployeeDto
     })
   }
 
   async findAll(role?: "INTERN" | "EMPLOYEE" ) {
-    if(role) return this.databaseservice.user.findMany({
+    if(role) return this.databaseservice.employee.findMany({
       where:{
         role,
       }
     })
-    return this.databaseservice.user.findMany();
+    return this.databaseservice.employee.findMany();
   }
 
   async findOne(id: number) {
-    return this.databaseservice.user.findUnique({
+    return this.databaseservice.employee.findUnique({
       where:{
         id,
       }
     })
   }
 
-  async update(id: number, updateEmployeeDto: Prisma.UserUpdateInput) {
-    return this.databaseservice.user.update({
+  async update(id: number, updateEmployeeDto: Prisma.EmployeeUpdateInput) {
+    return this.databaseservice.employee.update({
       where:{
         id,
       },
@@ -38,7 +38,7 @@ export class EmployeeService {
   }
 
   async remove(id: number) {
-    return this.databaseservice.user.delete({
+    return this.databaseservice.employee.delete({
       where:{
         id,
       }

@@ -7,7 +7,7 @@ export class EmployeeController {
   constructor(private readonly employeeService: EmployeeService) {}
 
   @Post()
-  create(@Body() createEmployeeDto: Prisma.UserCreateInput) {
+  create(@Body() createEmployeeDto: Prisma.EmployeeCreateInput) {
     return this.employeeService.create(createEmployeeDto);
   }
 
@@ -22,7 +22,7 @@ export class EmployeeController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateEmployeeDto: Prisma.UserUpdateInput) {
+  update(@Param('id') id: string, @Body() updateEmployeeDto: Prisma.EmployeeUpdateInput) {
     return this.employeeService.update(+id, updateEmployeeDto);
   }
 
